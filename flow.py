@@ -98,7 +98,7 @@ try:
     gcs_filename = f"{GCS_FOLDER}/{CURRENCY}_{KIND}_trades.json"
     
     # Initialize GCS client and upload the file
-    credentials_path = "D:/anfiai/public/login.json"  # Update this with the full path to your credentials.json
+    credentials_path = "./login.json"  # Update this with the full path to your credentials.json
     storage_client = storage.Client.from_service_account_json(credentials_path)
     bucket = storage_client.bucket(GCS_BUCKET)
     blob = bucket.blob(gcs_filename)
